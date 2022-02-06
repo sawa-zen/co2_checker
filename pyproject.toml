@@ -11,10 +11,7 @@ start = "test:main"
 python = "^3.9"
 "RPi.GPIO" = "0.7.1a4"
 mh-z19 = "^3.1.1"
-adafruit-circuitpython-charlcd = "^3.3.12"
-Adafruit-Blinka = "^6.20.1"
 dht11 = "^0.1.0"
-python-daemon = "^2.3.0"
 smbus = "^1.1.post2"
 
 [tool.poetry.dev-dependencies]

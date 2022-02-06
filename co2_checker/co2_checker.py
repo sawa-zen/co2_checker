@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import mh_z19
 import time
-import sys
 import dht11
 from i2c_lcd import i2c_lcd
 
