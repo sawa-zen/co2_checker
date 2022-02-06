@@ -1,0 +1,354 @@
+[[package]]
+name = "adafruit-blinka"
+version = "6.20.1"
+description = "CircuitPython APIs for non-CircuitPython versions of Python such as CPython on Linux and MicroPython."
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+Adafruit-PlatformDetect = ">=3.13.0"
+Adafruit-PureIO = ">=1.1.7"
+pyftdi = ">=0.40.0"
+
+[[package]]
+name = "adafruit-circuitpython-74hc595"
+version = "1.3.2"
+description = "CircuitPython driver for 74HC595 shift register."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-Blinka = "*"
+adafruit-circuitpython-busdevice = "*"
+
+[[package]]
+name = "adafruit-circuitpython-busdevice"
+version = "5.1.1"
+description = "CircuitPython bus device classes to manage bus sharing."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-Blinka = "*"
+
+[[package]]
+name = "adafruit-circuitpython-charlcd"
+version = "3.3.12"
+description = "CircuitPython library for standard character LCDs."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-Blinka = "*"
+adafruit-circuitpython-74hc595 = "*"
+adafruit-circuitpython-busdevice = "*"
+adafruit-circuitpython-mcp230xx = "*"
+
+[[package]]
+name = "adafruit-circuitpython-mcp230xx"
+version = "2.5.2"
+description = "CircuitPython library for controlling a MCP23008 or MCP23017 I2C GPIO expander."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-Blinka = "*"
+adafruit-circuitpython-busdevice = "*"
+
+[[package]]
+name = "adafruit-platformdetect"
+version = "3.19.4"
+description = "Platform detection for use by libraries like Adafruit-Blinka."
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[[package]]
+name = "adafruit-pureio"
+version = "1.1.9"
+description = "Pure python (i.e. no native extensions) access to Linux IO    including I2C and SPI. Drop in replacement for smbus and spidev modules."
+category = "main"
+optional = false
+python-versions = ">=3.5.0"
+
+[[package]]
+name = "argparse"
+version = "1.4.0"
+description = "Python command-line parsing library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "certifi"
+version = "2021.10.8"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "charset-normalizer"
+version = "2.0.10"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.5.0"
+
+[package.extras]
+unicode_backport = ["unicodedata2"]
+
+[[package]]
+name = "dht11"
+version = "0.1.0"
+description = "Pure Python library for reading DHT11 sensor on Raspberry Pi"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"RPi.GPIO" = "*"
+
+[[package]]
+name = "docutils"
+version = "0.18.1"
+description = "Docutils -- Python Documentation Utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "getrpimodel"
+version = "0.1.20"
+description = "Get Raspberry Pi model Name(eg: A, B, B+...)"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "idna"
+version = "3.3"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "lockfile"
+version = "0.12.2"
+description = "Platform-independent file locking module"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "mh-z19"
+version = "3.1.1"
+description = "mh-z19 CO2 concentration sensor library for All models of Raspberry Pi"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+argparse = "*"
+getrpimodel = "*"
+pyserial = "*"
+requests = "*"
+"RPi.GPIO" = "*"
+
+[[package]]
+name = "pyftdi"
+version = "0.53.3"
+description = "FTDI device driver (pure Python)"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pyserial = ">=3.0"
+pyusb = ">=1.0.0,<1.2.0 || >1.2.0"
+
+[[package]]
+name = "pyserial"
+version = "3.5"
+description = "Python Serial Port Extension"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+cp2110 = ["hidapi"]
+
+[[package]]
+name = "python-daemon"
+version = "2.3.0"
+description = "Library to implement a well-behaved Unix daemon process."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+docutils = "*"
+lockfile = ">=0.10"
+
+[package.extras]
+test = ["coverage", "docutils", "testscenarios (>=0.4)", "testtools"]
+
+[[package]]
+name = "pyusb"
+version = "1.2.1"
+description = "Python USB access module"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[[package]]
+name = "requests"
+version = "2.27.1"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = {version = ">=2.0.0,<2.1.0", markers = "python_version >= \"3\""}
+idna = {version = ">=2.5,<4", markers = "python_version >= \"3\""}
+urllib3 = ">=1.21.1,<1.27"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<5)"]
+
+[[package]]
+name = "rpi.gpio"
+version = "0.7.1a4"
+description = "A module to control Raspberry Pi GPIO channels"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "smbus"
+version = "1.1.post2"
+description = "Python bindings for Linux SMBus access through i2c-dev"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "urllib3"
+version = "1.26.8"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
+
+[package.extras]
+brotli = ["brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "0d0b0196fd4b69324fc76ad08a1f5f28f6fa069d2dbcd9f52671ad2845f80760"
+
+[metadata.files]
+adafruit-blinka = [
+    {file = "Adafruit-Blinka-6.20.1.tar.gz", hash = "sha256:083f59e6de8fb8d2ceb0f4e056180c8f41f41cf59736d6abb7d7ec92281b8263"},
+]
+adafruit-circuitpython-74hc595 = [
+    {file = "adafruit-circuitpython-74hc595-1.3.2.tar.gz", hash = "sha256:116b7d1de08b2a02f2abca9ad61217ba56619512bae7a2f8b6dccd14384d0c08"},
+]
+adafruit-circuitpython-busdevice = [
+    {file = "adafruit-circuitpython-busdevice-5.1.1.tar.gz", hash = "sha256:27049b07a3d6cdc6646bfe950ab1465604d898454b0fd9d893fd2c5294551506"},
+]
+adafruit-circuitpython-charlcd = [
+    {file = "adafruit-circuitpython-charlcd-3.3.12.tar.gz", hash = "sha256:0ab3ddaec25147db0170ac0a6e3b968fce15ec19eb06e4f53ffc9ae8c0d6f811"},
+]
+adafruit-circuitpython-mcp230xx = [
+    {file = "adafruit-circuitpython-mcp230xx-2.5.2.tar.gz", hash = "sha256:fd6298037c598b7c06b24b96828295cf37dffe1785fb7bbde63f41777b654cd7"},
+]
+adafruit-platformdetect = [
+    {file = "Adafruit-PlatformDetect-3.19.4.tar.gz", hash = "sha256:6ffb809ab15d02d997523696d37f2629e660587092204cc266f0b2ffd677821c"},
+]
+adafruit-pureio = [
+    {file = "Adafruit_PureIO-1.1.9.tar.gz", hash = "sha256:2caf22fb07c7f771d83267f331a76cde314723f884a9570ea6f768730c87a879"},
+]
+argparse = [
+    {file = "argparse-1.4.0-py2.py3-none-any.whl", hash = "sha256:c31647edb69fd3d465a847ea3157d37bed1f95f19760b11a47aa91c04b666314"},
+    {file = "argparse-1.4.0.tar.gz", hash = "sha256:62b089a55be1d8949cd2bc7e0df0bddb9e028faefc8c32038cc84862aefdd6e4"},
+]
+certifi = [
+    {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
+    {file = "certifi-2021.10.8.tar.gz", hash = "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"},
+]
+charset-normalizer = [
+    {file = "charset-normalizer-2.0.10.tar.gz", hash = "sha256:876d180e9d7432c5d1dfd4c5d26b72f099d503e8fcc0feb7532c9289be60fcbd"},
+    {file = "charset_normalizer-2.0.10-py3-none-any.whl", hash = "sha256:cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455"},
+]
+dht11 = [
+    {file = "dht11-0.1.0-py3-none-any.whl", hash = "sha256:69d1314322d409a0de7eff6df2896e98ae8f8274a597416e75dd1e7e2c2d23d9"},
+    {file = "dht11-0.1.0.tar.gz", hash = "sha256:148de58f2555ca05b85b0b3fadb2fcf8070ec7195daade4cb355685265a933c2"},
+]
+docutils = [
+    {file = "docutils-0.18.1-py2.py3-none-any.whl", hash = "sha256:23010f129180089fbcd3bc08cfefccb3b890b0050e1ca00c867036e9d161b98c"},
+    {file = "docutils-0.18.1.tar.gz", hash = "sha256:679987caf361a7539d76e584cbeddc311e3aee937877c87346f31debc63e9d06"},
+]
+getrpimodel = [
+    {file = "getrpimodel-0.1.20.tar.gz", hash = "sha256:de85392d13359c4708080543bb5312d0c01935f30e26637c4347f84cf165275a"},
+]
+idna = [
+    {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
+    {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
+]
+lockfile = [
+    {file = "lockfile-0.12.2-py2.py3-none-any.whl", hash = "sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa"},
+    {file = "lockfile-0.12.2.tar.gz", hash = "sha256:6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799"},
+]
+mh-z19 = [
+    {file = "mh_z19-3.1.1.tar.gz", hash = "sha256:136da8f2684cc3d2f3f0f99a01b2be70d785b08e93afef1db2bc3a118b68b5be"},
+]
+pyftdi = [
+    {file = "pyftdi-0.53.3-py3-none-any.whl", hash = "sha256:6e86880ec6d66389de643ca83de5d59fffea3bd334f492e12fab71a832f878a2"},
+    {file = "pyftdi-0.53.3.tar.gz", hash = "sha256:4ef20c246bdb0f278d283337d7a6e69cf9bdb0ead525e7ad867d9e46ad26e613"},
+]
+pyserial = [
+    {file = "pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"},
+    {file = "pyserial-3.5.tar.gz", hash = "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb"},
+]
+python-daemon = [
+    {file = "python-daemon-2.3.0.tar.gz", hash = "sha256:bda993f1623b1197699716d68d983bb580043cf2b8a66a01274d9b8297b0aeaf"},
+    {file = "python_daemon-2.3.0-py2.py3-none-any.whl", hash = "sha256:191c7b67b8f7aac58849abf54e19fe1957ef7290c914210455673028ad454989"},
+]
+pyusb = [
+    {file = "pyusb-1.2.1-py3-none-any.whl", hash = "sha256:2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36"},
+    {file = "pyusb-1.2.1.tar.gz", hash = "sha256:a4cc7404a203144754164b8b40994e2849fde1cfff06b08492f12fff9d9de7b9"},
+]
+requests = [
+    {file = "requests-2.27.1-py2.py3-none-any.whl", hash = "sha256:f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d"},
+    {file = "requests-2.27.1.tar.gz", hash = "sha256:68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"},
+]
+"rpi.gpio" = [
+    {file = "RPi.GPIO-0.7.1a4-cp310-cp310-linux_armv6l.whl", hash = "sha256:cc9a97d2d1cd7993e03d74d5d149caaa24df368f3def49aac00f99205b22bd9f"},
+    {file = "RPi.GPIO-0.7.1a4-cp37-cp37m-linux_armv6l.whl", hash = "sha256:4aa3610414092689e33ee9312a4f496f7b0b38675e225ff4629cb951e117a31f"},
+    {file = "RPi.GPIO-0.7.1a4-cp38-cp38-linux_armv6l.whl", hash = "sha256:78fa12d83010e901b3268adf346fc7db49545113d72d988695bd95775bb55e54"},
+    {file = "RPi.GPIO-0.7.1a4-cp39-cp39-linux_armv6l.whl", hash = "sha256:8edb497b2be1705a693f6947d6ef204cce38c8db2cf1cbd4104fbbc744316edd"},
+    {file = "RPi.GPIO-0.7.1a4.tar.gz", hash = "sha256:21f4378d81525979ad3bbd60e88fc3d9fac1879bcb17151e1c665f32658f9362"},
+]
+smbus = [
+    {file = "smbus-1.1.post2-cp27-cp27mu-linux_armv7l.whl", hash = "sha256:529f9effc383b6381534d1d845eaf1078bdd2d4e625c945b23cf274d5cf1c306"},
+    {file = "smbus-1.1.post2-cp34-cp34m-linux_armv7l.whl", hash = "sha256:39923448455a41c6bbe823de62b191103dd711917056362d9e4b1d2c6ec0f06d"},
+    {file = "smbus-1.1.post2-cp35-cp35m-linux_armv7l.whl", hash = "sha256:b467235734ae5c147c4ec0eff1afb9dba189d9d3cc086ed7e0d3dbf0ae485230"},
+    {file = "smbus-1.1.post2.tar.gz", hash = "sha256:f96d345e0aa10053a8a4917634f1dc37ba1f656fa5cace7629b71777e90855c6"},
+]
+urllib3 = [
+    {file = "urllib3-1.26.8-py2.py3-none-any.whl", hash = "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed"},
+    {file = "urllib3-1.26.8.tar.gz", hash = "sha256:0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"},
+]
