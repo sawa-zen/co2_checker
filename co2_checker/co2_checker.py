@@ -7,7 +7,7 @@ from i2c_lcd import i2c_lcd
 # initialize GPIO
 GPIO.setwarnings(True)
 GPIO.setmode(GPIO.BCM)
-instance = dht11.DHT11(pin=14)
+#instance = dht11.DHT11(pin=14)
 
 def main():
   co2 = 0.0
@@ -19,10 +19,10 @@ def main():
     out = mh_z19.read_from_pwm()
     co2 = out['co2']
 
-    result = instance.read()
-    if result.is_valid():
-      temperature = result.temperature
-      humidity = result.humidity
+    #result = instance.read()
+    #if result.is_valid():
+      #temperature = result.temperature
+      #humidity = result.humidity
 
     lcd_message = "{}ppm\n{}C / {}%".format(str(co2),
                                             str(temperature), str(humidity))
