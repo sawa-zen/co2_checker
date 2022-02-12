@@ -14,5 +14,6 @@ RUN apt-get update --fix-missing \
  && apt-get -y clean \
  && rm -rf /var/lib/apt/lists/*
 RUN /usr/local/bin/python3.10 -m pip install --upgrade pip
-RUN pip install .
+RUN pip install --no-cache-dir .
 
+CMD ["python", "./co2_checker/co2_checker.py"]
