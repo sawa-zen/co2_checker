@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi2-python:latest
+FROM balenalib/raspberry-pi-python:latest
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,9 @@ RUN apt-get update --fix-missing \
     gcc \
     make \
     musl-dev \
+    python3-dev \
     python3-smbus \
+    i2c-tools \
  && apt-get -y clean \
  && rm -rf /var/lib/apt/lists/*
 RUN /usr/local/bin/python3.10 -m pip install --upgrade pip
