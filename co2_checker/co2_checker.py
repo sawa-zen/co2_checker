@@ -24,13 +24,13 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
     s = (
       '# HELP room_co2_concentration_ppm 部屋の二酸化酸素濃度の値です\n'
       '# TYPE room_co2_concentration_ppm gauge\n'
-      'room_co2_concentration_ppm {}\n'
+      'room_co2_concentration_ppm{room="sawa_zen_studio"} {}\n'
       '# HELP room_temperature_degrees_celsius 部屋の温度の値です\n'
       '# TYPE room_temperature_degrees_celsius gauge\n'
-      'room_temperature_degrees_celsius {}\n'
+      'room_temperature_degrees_celsius{room="sawa_zen_studio"} {}\n'
       '# HELP room_humidity_percent 部屋の湿度の値です\n'
       '# TYPE room_humidity_percent gauge\n'
-      'room_humidity_percent {}\n'
+      'room_humidity_percent{room="sawa_zen_studio"} {}\n'
     )
     self.wfile.write(s.format(str(co2), str(temperature), str(humidity)).encode('utf-8'))
 
