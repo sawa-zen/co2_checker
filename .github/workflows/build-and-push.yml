@@ -8,6 +8,8 @@ on:
 
 jobs:
   main:
+    env:
+      IMAGE_NAME: co2-checker
     runs-on: ubuntu-latest
     steps:
     # 3. Checkout code
@@ -25,8 +27,8 @@ jobs:
       with:
         context: .
         file: ./Dockerfile
-        platforms: linux/arm/v7,linux/v6
-        push: false
-        # # 7. nameing
-        # tags: |
-        #   ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.CI_REPOSITORY_NAME }}:latest
+        platforms: linux/v6
+        push: true
+        # 7. nameing
+        tags: |
+          ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
