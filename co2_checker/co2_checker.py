@@ -32,7 +32,7 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
       '# TYPE room_humidity_percent gauge\n'
       'room_humidity_percent {}\n'
     )
-    self.wfile.write(s.format(co2, temperature, humidity).encode('utf-8'))
+    self.wfile.write(s.format(str(co2), str(temperature), str(humidity)).encode('utf-8'))
 
 def watch_air_environment():
   global co2, temperature, humidity
