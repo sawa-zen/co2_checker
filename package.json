@@ -1,13 +1,10 @@
 {
-  "name": "test",
+  "name": "co2_checker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "sawa-zen",
+  "license": "MIT",
   "dependencies": {
     "pigpio": "^3.3.1",
     "raspberrypi-liquid-crystal": "^1.20.0",
