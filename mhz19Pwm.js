@@ -7,14 +7,31 @@ class Mhz19Pwm {
   _lastFallingEdgeTick = 0; // 前回の立ち上がりした時刻 (μs)
   _lastCO2 = 0;   // ppm
 
-  constructor(pin) {
+  /**
+   * @constructor
+   * @param {number} pwmPin MH-Z19 の PWM
+   */
+  constructor(pwmPin) {
     // MH-Z19 の PWM 出力を受ける GPIO
-    const sensorPin = new Gpio(pin, {
+    const sensorPin = new Gpio(pwmPin, {
       mode: Gpio.INPUT, // GPIO ピンを入力モードに設定
       alert: true, // エッジ（High→Low または Low→High）検出を有効化。
       pullUpDown: Gpio.PUD_DOWN // ピンが未接続時に Low に固定される設定
     });
     sensorPin.on('alert', this._handleAlert.bind(this));
+  }
+
+  /**
+   * CO2 濃度取得
+   * @returns CO2 濃度 (ppm)
+   */
+  getCO2() {
+    return this._lastCO2;
+  }
+
+  dispose() {
+    // 未使用の場合は明示的に終了処理を呼び出す
+    pigpio.terminate();
   }
 
   /**
@@ -24,10 +41,8 @@ class Mhz19Pwm {
    * @param tick pigpio によって記録されたエッジのタイムスタンプ（マイクロ秒単位）
    */
   _handleAlert(level, tick) {
-    console.info("aaaaa")
     // pigpioは 'tick' をマイクロ秒(μs)単位のタイムスタンプで渡してくれる
     if (this._lastTick === 0) {
-      console.info("bbbb")
       // 初回のエッジは比較できる過去がないので記録だけ
       this._lastTick = tick;
       this._lastLevel = level;
@@ -57,7 +72,6 @@ class Mhz19Pwm {
         // CO2 計算
         const co2ppm = this._calcCO2(tHigh, tPeriod);
         if (co2ppm > 0) {
-          console.log(`CO2: ${co2ppm} ppm (T_high=${tHigh}µs, T_period=${tPeriod}µs)`);
           this._lastCO2 = co2ppm;
         }
       }
