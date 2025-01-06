@@ -7,7 +7,7 @@ const mhz19Pwm = new Mhz19Pwm(12)
 const lcd = new LCD(1, 0x27, 16, 2);
 lcd.beginSync();
 
-const app = express({ port: 3000 });
+const app = express();
 app.get('/metrics', (_req, res) => {
   const dht11Readout = sensorLib.read(11, 14);
   const co2 = mhz19Pwm.getCO2();
@@ -22,6 +22,10 @@ app.get('/metrics', (_req, res) => {
     `# TYPE room_humidity_percent gauge\n` +
     `room_humidity_percent{room="sawa_zen_studio"} ${dht11Readout.humidity.toFixed(1)}\n`
   );
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
 });
 
 setInterval(() => {
